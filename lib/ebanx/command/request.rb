@@ -8,6 +8,10 @@ module Ebanx
         @response_type  = :json
       end
 
+      def params
+        @params.to_json
+      end
+
       def validate
         validate_presence :currency_code
         validate_presence :amount
